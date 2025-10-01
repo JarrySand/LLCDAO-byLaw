@@ -1,0 +1,140 @@
+---
+description: Manage Notion MCP server operations including start, stop, test, and usage commands for seamless Cursor-Notion integration
+globs: 
+alwaysApply: false
+---
+
+# @mcp - Notion MCP Server Management
+
+## Available Commands
+
+### @mcp-start
+**Purpose**: Start the Notion MCP server
+**Action**: 
+```bash
+cd C:\Users\zukas\mybrain\notion-mcp
+venv\Scripts\activate
+python -m notion_mcp
+```
+**Response**: "Notion MCP サーバーを起動しています... ポート待機中です。"
+
+### @mcp-stop
+**Purpose**: Stop the Notion MCP server
+**Action**: Send Ctrl+C signal to running MCP server process
+**Response**: "Notion MCP サーバーを停止しました。"
+
+### @mcp-status
+**Purpose**: Check MCP server connection status
+**Action**: Check if MCP tools are available in Cursor
+**Response**: Display current MCP server status and available tools
+
+### @mcp-test
+**Purpose**: Test MCP server functionality
+**Action**: Execute basic MCP operations to verify connection
+**Response**: Show test results and connection status
+
+### @mcp-databases
+**Purpose**: List available Notion databases
+**Action**: Call `mcp_notion_list_databases`
+**Response**: Display database list with IDs and names
+
+### @mcp-sync
+**Purpose**: Sync content between Obsidian and Notion
+**Action**: Execute markdown-to-Notion conversion
+**Response**: Show sync progress and results
+
+### @mcp-comments
+**Purpose**: Read and analyze comments from Notion pages with detailed context
+**Action**: Use `mcp_notion_get_comments_with_context` to fetch page comments with context
+**Response**: Display comments with detailed context analysis and suggestions
+**Usage Example**:
+```
+@mcp-comments <page_id>
+- Reads all comments from the specified Notion page
+- Shows WHICH CONTENT each comment refers to (specific blocks/paragraphs)
+- Provides discussion thread grouping and author information
+- Analyzes content for issues, suggestions, feedback with context
+- Provides AI-powered responses to comments with understanding of what was commented on
+```
+
+**Enhanced Context Information**:
+- 📍 **Target Content**: Which specific block/paragraph was commented on
+- 🧵 **Discussion Threading**: Groups related comments in conversations  
+- 👤 **Author Information**: Who made each comment and when
+- 📄 **Content Preview**: Shows the actual content that was commented on
+- 🔗 **Parent-Child Relationships**: Block hierarchy and relationships
+
+### @mcp-comment
+**Purpose**: Create AI-powered comments on Notion pages
+**Action**: Use `mcp_notion_create_comment` to post intelligent feedback
+**Response**: Confirm comment creation with content preview
+**Usage Example**:
+```
+@mcp-comment <page_id> "Your feedback message"
+- Creates a new comment on the specified page
+- Can include AI analysis and suggestions
+- Supports rich formatting and structured feedback
+```
+
+## Server Configuration
+
+### Location
+- **Path**: `C:\Users\zukas\mybrain\notion-mcp`
+- **Virtual Environment**: `venv\Scripts\activate`
+- **Module**: `python -m notion_mcp`
+
+### Required Environment
+- Python virtual environment must be activated
+- Notion API token must be configured
+- MCP client connection established in Cursor
+
+## Usage Workflow
+
+### Startup Sequence
+1. Navigate to notion-mcp directory
+2. Activate Python virtual environment
+3. Start MCP server module
+4. Verify connection in Cursor MCP panel
+5. Test basic operations
+
+### Available MCP Tools
+When server is running, these tools become available:
+- `mcp_notion_list_databases`
+- `mcp_notion_get_database`
+- `mcp_notion_query_database`
+- `mcp_notion_create_page`
+- `mcp_notion_update_page`
+- `mcp_notion_get_block_children`
+- `mcp_notion_search`
+- `mcp_notion_get_comments` ✨ NEW!
+- `mcp_notion_create_comment` ✨ NEW!
+- `mcp_notion_get_comments_with_context` ✨ ENHANCED!
+
+### Integration Features
+- **Bidirectional sync** between Obsidian markdown and Notion pages
+- **Database operations** for structured data management
+- **Content transformation** with proper formatting preservation
+- **Error handling** with detailed status reporting
+
+## Troubleshooting
+
+### Common Issues
+- **Port conflicts**: Check if MCP server port is available
+- **Authentication**: Verify Notion API token configuration
+- **Virtual environment**: Ensure correct Python environment is activated
+- **Dependencies**: Check if all required packages are installed
+
+### Status Checking
+Use `@mcp-status` to verify:
+- Server process is running
+- MCP tools are registered in Cursor
+- API authentication is working
+- Database connections are available
+
+## Success Response Examples
+```
+✅ Notion MCP サーバー起動完了
+🔗 接続確認: OK
+📚 利用可能データベース: 5個
+🛠️ MCP ツール: 7個登録済み
+```

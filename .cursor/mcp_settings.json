@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "notion-mcp": {
+      "command": "python",
+      "args": ["-m", "notion_mcp"],
+      "cwd": "C:/Users/zukas/LLCDAO-bylaw/notion-mcp/notion-mcp-clone",
+      "env": {
+        "VIRTUAL_ENV": "C:/Users/zukas/LLCDAO-bylaw/notion-mcp/notion-mcp-clone/venv"
+      }
+    }
+  }
+}

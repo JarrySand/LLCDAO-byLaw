@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "notion-mcp": {
+      "command": "C:\\Users\\zukas\\mybrain\\notion-mcp\\venv\\Scripts\\python.exe",
+      "args": ["-m", "notion_mcp"],
+      "cwd": "C:\\Users\\zukas\\mybrain\\notion-mcp",
+      "env": {
+        "NOTION_API_KEY": "${env:NOTION_API_KEY}"
+      }
+    }
+  }
+}
