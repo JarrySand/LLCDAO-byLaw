@@ -23,7 +23,7 @@
 - **Pull Request で提案する**: [差分を作成](../../compare)
   - 対象ファイルを直接編集し、変更点を明確に記載してください
 
-受付範囲は上記7ファイルです。その他の資料は参考用のため、原則コメント対象外です。
+受付範囲は上記7ファイルに加え、`docs/guide/` 配下のガイド文書（context / structure / operation）もレビュー対象に含めます。
 
 ---
 
@@ -38,6 +38,10 @@ LLCDAO-bylaw/
 │   ├── DAO総会別紙.md
 │   ├── 共通運用.md
 │   └── トークン別紙.md
+├── docs/
+│   ├── README.md
+│   ├── guide/
+│   │   └── README.md
 ├── assets/
 ├── release/
 ├── archive/
@@ -50,6 +54,13 @@ LLCDAO-bylaw/
 - **wip/**: まだ調整中の文書
   - [DAO憲章v1.0.md](./wip/DAO憲章v1.0.md)
   - [トレジャリー管理規程v1.0.md](./wip/トレジャリー管理規程v1.0.md)
+
+---
+
+## docs/ の補足
+- `docs/` は周辺ドキュメントの置き場です。
+- 運用ガイドや手順等は `docs/guide/` に配置してください。
+- 参考: [docs/README.md](./docs/README.md), [docs/guide/README.md](./docs/guide/README.md)
 
 ---
 
