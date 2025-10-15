@@ -70,6 +70,22 @@ LLCDAO-bylaw/
 
 ---
 
+## GitHub Pages（公開ビュー）
+このリポジトリはリポジトリ直下の `index.html` をエントリとして、クライアントサイドで Markdown を読み込んで表示します。
+
+### 有効化手順
+- Settings → Pages → Build and deployment
+  - Source: "Deploy from a branch"
+  - Branch: `release`（もしくは `main`）、フォルダは `/ (root)` を選択
+- 反映後、`index.html` から左メニューで定款・規程・ガイドを選べます
+
+### 公開URLの例
+- `https://<your-org-or-user>.github.io/LLCDAO-bylaw/`
+
+注意: ファイル名に日本語が含まれているため、内部読み込みではエンコード処理を行っています（`assets/app.js`）。
+
+---
+
 ## 免責
 本資料は一般的な情報提供を目的としたものであり、法律上の助言を構成するものではありません。実装や運用にあたっては、専門家の助言を受けてください。
 
