@@ -127,11 +127,8 @@
   // init
   buildIndex();
   window.addEventListener('hashchange', onHashChange);
-  // Load first item if no hash
-  if (!location.hash) {
-    const first = state.docs[0]?.items?.[0];
-    if (first) location.hash = `#${encodeURIComponent(first.id)}`;
-  } else {
+  // If a doc is selected, render it; otherwise keep the home intro
+  if (location.hash) {
     onHashChange();
   }
 })();
