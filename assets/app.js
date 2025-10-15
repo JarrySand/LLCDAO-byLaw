@@ -31,20 +31,58 @@
       secEl.appendChild(header);
 
       const content = createEl('div', 'section-content');
-      for (const doc of section.items) {
-        state.byId.set(doc.id, doc);
-        const a = createEl('a', 'link');
-        a.href = `#${encodeURIComponent(doc.id)}`;
-        a.textContent = doc.title;
-        a.dataset.docId = doc.id;
-        content.appendChild(a);
+      if (section.subsections && section.subsections.length > 0) {
+        for (const sub of section.subsections) {
+          const subEl = createEl('div', 'subsection');
+          const subHeader = createEl('div', 'subsection-header');
+          const subCaret = createEl('span', 'caret');
+          const subTitle = createEl('span', null, sub.title);
+          subHeader.appendChild(subCaret);
+          subHeader.appendChild(subTitle);
+          subHeader.addEventListener('click', () => {
+            const collapsed = subEl.classList.toggle('collapsed');
+            try { localStorage.setItem(`subsection:${section.key || section.title}:${sub.key || sub.title}`, collapsed ? '1' : '0'); } catch (_) {}
+          });
+          subEl.appendChild(subHeader);
+
+          const subContent = createEl('div', 'subsection-content');
+          for (const doc of sub.items) {
+            state.byId.set(doc.id, doc);
+            const a = createEl('a', 'link');
+            a.href = `#${encodeURIComponent(doc.id)}`;
+            a.textContent = doc.title;
+            a.dataset.docId = doc.id;
+            subContent.appendChild(a);
+          }
+          subEl.appendChild(subContent);
+
+          // default collapsed; restore saved state
+          subEl.classList.add('collapsed');
+          try {
+            const saved = localStorage.getItem(`subsection:${section.key || section.title}:${sub.key || sub.title}`);
+            if (saved === '0') subEl.classList.remove('collapsed');
+          } catch (_) {}
+
+          content.appendChild(subEl);
+        }
+      } else {
+        for (const doc of section.items) {
+          state.byId.set(doc.id, doc);
+          const a = createEl('a', 'link');
+          a.href = `#${encodeURIComponent(doc.id)}`;
+          a.textContent = doc.title;
+          a.dataset.docId = doc.id;
+          content.appendChild(a);
+        }
       }
       secEl.appendChild(content);
 
       // restore collapsed state
       try {
         const saved = localStorage.getItem(`section:${section.key || section.title}`);
-        if (saved === '1') secEl.classList.add('collapsed');
+        // default collapsed
+        secEl.classList.add('collapsed');
+        if (saved === '0') secEl.classList.remove('collapsed');
       } catch (_) {}
 
       nav.appendChild(secEl);

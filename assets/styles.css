@@ -63,6 +63,33 @@ html, body {
 .section:not(.collapsed) .caret { transform: rotate(90deg); }
 .section-content { padding: 4px 0; }
 .section.collapsed .section-content { display: none; }
+
+/* Subsections under Guides */
+.subsection { margin: 4px 0 8px 0; }
+.subsection-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px 6px 28px;
+  font-weight: 600;
+  color: var(--muted);
+  font-size: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+.subsection .caret {
+  width: 0; height: 0;
+  border-left: 5px solid currentColor;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  transition: transform 0.15s ease-in-out;
+}
+.subsection:not(.collapsed) .caret { transform: rotate(90deg); }
+.subsection-content { padding: 2px 0; }
+.subsection.collapsed .subsection-content { display: none; }
+
+/* Indent links under subsections */
+.subsection .link { padding-left: 40px; }
 .link {
   display: block;
   padding: 8px 16px;
