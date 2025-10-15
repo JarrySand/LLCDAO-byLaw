@@ -5,7 +5,9 @@
 - ガイド（`guide/`）: 設計思想・構成・運用ガイド
   - [guide/context.md](./guide/context.md) — 定款・規程の設計思想（共通原則/前提/トレードオフ）
   - [guide/structure.md](./guide/structure.md) — 定款と規程の構成・参照関係・版管理
-  - [guide/operation.md](./guide/operation.md) — 実運用手順・チェックリスト
+  - [guide/operation.md](./guide/operation.md) — 文書運用（変更管理/レビュー/リリース）の実務手順
+  - [guide/dao-runbook/](./guide/dao-runbook/README.md) — 規程に「従って」DAOを運営するための実務ランブック
+  - [guide/dao-setup/](./guide/dao-setup/README.md) — 雛形に従ってDAOを新規立ち上げるための準備・決定事項ガイド
 注意: 公開コメントの対象は、リポジトリ直下・`appendices/` の主要文書に加えて、`docs/guide/` 配下（context/structure/operation）も含みます。
 
 ### 構成
