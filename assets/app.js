@@ -31,6 +31,20 @@
       secEl.appendChild(header);
 
       const content = createEl('div', 'section-content');
+
+      // Always render top-level items first (if any)
+      if (Array.isArray(section.items)) {
+        for (const doc of section.items) {
+          state.byId.set(doc.id, doc);
+          const a = createEl('a', 'link');
+          a.href = `#${encodeURIComponent(doc.id)}`;
+          a.textContent = doc.title;
+          a.dataset.docId = doc.id;
+          content.appendChild(a);
+        }
+      }
+
+      // Then render subsections (if any)
       if (section.subsections && section.subsections.length > 0) {
         for (const sub of section.subsections) {
           const subEl = createEl('div', 'subsection');
@@ -64,15 +78,6 @@
           } catch (_) {}
 
           content.appendChild(subEl);
-        }
-      } else {
-        for (const doc of section.items) {
-          state.byId.set(doc.id, doc);
-          const a = createEl('a', 'link');
-          a.href = `#${encodeURIComponent(doc.id)}`;
-          a.textContent = doc.title;
-          a.dataset.docId = doc.id;
-          content.appendChild(a);
         }
       }
       secEl.appendChild(content);
