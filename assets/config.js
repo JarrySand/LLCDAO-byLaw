@@ -2,6 +2,7 @@
 // path is relative to the site root (repository root when Pages source is root).
 window.DOCS = [
   {
+    key: 'bylaws',
     title: '定款・規程（最新版）',
     items: [
       { id: 'bylaw-articles-v2-0', title: '01 定款ひな形 ver2.0', path: '01_【社員権トークン＋ガバナンストークン】合同会社型DAO定款ひな形ver2.0.md' },
@@ -11,6 +12,7 @@ window.DOCS = [
     ],
   },
   {
+    key: 'appendices',
     title: '別紙（appendices）',
     items: [
       { id: 'appendix-assembly', title: 'DAO総会別紙', path: 'appendices/DAO総会別紙.md' },
@@ -19,14 +21,20 @@ window.DOCS = [
     ],
   },
   {
+    key: 'guides',
     title: 'ガイド（docs/guide/）',
     items: [
       { id: 'guide-readme', title: 'ガイド概要（README）', path: 'docs/guide/README.md' },
       { id: 'guide-context', title: '設計思想（context）', path: 'docs/guide/context.md' },
       { id: 'guide-structure', title: '構成/参照/版管理（structure）', path: 'docs/guide/structure.md' },
       { id: 'guide-operation', title: '実運用（operation）', path: 'docs/guide/operation.md' },
-      // dao-runbook
-      { id: 'dao-runbook-readme', title: 'DAOランブック 概要', path: 'docs/guide/dao-runbook/README.md' },
+    ],
+  },
+  {
+    key: 'runbook',
+    title: 'ランブック（dao-runbook）',
+    items: [
+      { id: 'dao-runbook-readme', title: 'ランブック 概要', path: 'docs/guide/dao-runbook/README.md' },
       { id: 'dao-runbook-01', title: 'ランブック 01 役割と責任', path: 'docs/guide/dao-runbook/01_roles_and_responsibilities.md' },
       { id: 'dao-runbook-02', title: 'ランブック 02 年間カレンダー', path: 'docs/guide/dao-runbook/02_annual_calendar.md' },
       { id: 'dao-runbook-03', title: 'ランブック 03 総会運営', path: 'docs/guide/dao-runbook/03_assembly_operations.md' },
@@ -35,8 +43,13 @@ window.DOCS = [
       { id: 'dao-runbook-06', title: 'ランブック 06 トレジャリー運用', path: 'docs/guide/dao-runbook/06_treasury_operations.md' },
       { id: 'dao-runbook-07', title: 'ランブック 07 コンプライアンス・インシデント', path: 'docs/guide/dao-runbook/07_compliance_and_incidents.md' },
       { id: 'dao-runbook-08', title: 'ランブック 08 監査と改善', path: 'docs/guide/dao-runbook/08_audit_and_improvement.md' },
-      // dao-setup
-      { id: 'dao-setup-readme', title: 'DAO立上げガイド 概要', path: 'docs/guide/dao-setup/README.md' },
+    ],
+  },
+  {
+    key: 'setup',
+    title: '立上げガイド（dao-setup）',
+    items: [
+      { id: 'dao-setup-readme', title: '立上げガイド 概要', path: 'docs/guide/dao-setup/README.md' },
       { id: 'dao-setup-01', title: '立上げ 01 目的/範囲/法域', path: 'docs/guide/dao-setup/01_purpose_scope_jurisdiction.md' },
       { id: 'dao-setup-02', title: '立上げ 02 採用/版管理/発効', path: 'docs/guide/dao-setup/02_adopt_bylaws_versioning_effective.md' },
       { id: 'dao-setup-03', title: '立上げ 03 トークンと権限モデル', path: 'docs/guide/dao-setup/03_tokens_and_authority_model.md' },

@@ -19,15 +19,34 @@
 
     for (const section of state.docs) {
       const secEl = createEl('div', 'section');
-      secEl.appendChild(createEl('div', 'section-title', section.title));
+      const header = createEl('div', 'section-header');
+      const caret = createEl('span', 'caret');
+      const title = createEl('span', null, section.title);
+      header.appendChild(caret);
+      header.appendChild(title);
+      header.addEventListener('click', () => {
+        const collapsed = secEl.classList.toggle('collapsed');
+        try { localStorage.setItem(`section:${section.key || section.title}`, collapsed ? '1' : '0'); } catch (_) {}
+      });
+      secEl.appendChild(header);
+
+      const content = createEl('div', 'section-content');
       for (const doc of section.items) {
         state.byId.set(doc.id, doc);
         const a = createEl('a', 'link');
         a.href = `#${encodeURIComponent(doc.id)}`;
         a.textContent = doc.title;
         a.dataset.docId = doc.id;
-        secEl.appendChild(a);
+        content.appendChild(a);
       }
+      secEl.appendChild(content);
+
+      // restore collapsed state
+      try {
+        const saved = localStorage.getItem(`section:${section.key || section.title}`);
+        if (saved === '1') secEl.classList.add('collapsed');
+      } catch (_) {}
+
       nav.appendChild(secEl);
     }
   }
