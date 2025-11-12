@@ -33,3 +33,8 @@ Draft → Submitted → Review → Voting → Passed/Rejected → Implementing �
 - 実行中タスクとリスク
 
 
+### GitHub運用補足（最小）
+- Issue → Branch → PR → レビュー → 決裁 → リリース（タグ）の順で進める
+- ブランチ命名: `feat/*` `fix/*` `docs/*`。1コミット1論点、文面と体裁は分離
+- PR本文: 目的／差分要約／整合性・影響／周知計画を簡潔に記載（チェックリスト併記推奨）
+
