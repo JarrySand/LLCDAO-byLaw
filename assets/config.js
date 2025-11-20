@@ -10,6 +10,7 @@ window.DOCS = [
       { id: 'assembly-rules-v2-1', title: '02 DAO総会規程 ver2.1', path: '02_DAO総会規程ver2.1.md' },
       { id: 'operation-rules-v2-1', title: '03 運営規程 ver2.1', path: '03_運営規程ver2.1.md' },
       { id: 'token-rules-v2-2', title: '04 トークン規程 ver2.2', path: '04_トークン規程ver2.2.md' },
+      { id: 'glossary', title: '05 用語集', path: '05_用語集.md' },
     ],
   },
   // 2) 別紙
@@ -30,42 +31,31 @@ window.DOCS = [
       { id: 'guide-readme', title: 'ガイド概要（README）', path: 'docs/guide/README.md' },
       { id: 'guide-context', title: '設計思想（context）', path: 'docs/guide/context.md' },
       { id: 'guide-structure', title: '構成/参照/版管理（structure）', path: 'docs/guide/structure.md' },
-      { id: 'guide-operation', title: '実運用（operation）', path: 'docs/guide/operation.md' },
     ],
   },
-  // 4) 立上げガイド（トップレベル）
+  // 4) 立上げガイド（Setup）
   {
     key: 'setup',
-    title: '立上げガイド（dao-setup）',
+    title: '立上げガイド（Setup）',
     items: [
-      { id: 'dao-setup-readme-top', title: '立上げガイド 概要', path: 'docs/guide/dao-setup/README.md' },
-      { id: 'dao-setup-01-top', title: '立上げ 01 目的/範囲/法域', path: 'docs/guide/dao-setup/01_purpose_scope_jurisdiction.md' },
-      { id: 'dao-setup-02-top', title: '立上げ 02 採用/版管理/発効', path: 'docs/guide/dao-setup/02_adopt_bylaws_versioning_effective.md' },
-      { id: 'dao-setup-03-top', title: '立上げ 03 トークンと権限モデル', path: 'docs/guide/dao-setup/03_tokens_and_authority_model.md' },
-      { id: 'dao-setup-04-top', title: '立上げ 04 投票・基準・定足数', path: 'docs/guide/dao-setup/04_voting_methods_thresholds_quorum.md' },
-      { id: 'dao-setup-05-top', title: '立上げ 05 トレジャリーデザイン', path: 'docs/guide/dao-setup/05_treasury_design.md' },
-      { id: 'dao-setup-06-top', title: '立上げ 06 役割/RACI/チャネル', path: 'docs/guide/dao-setup/06_roles_raci_channels.md' },
-      { id: 'dao-setup-07-top', title: '立上げ 07 ツールスタック', path: 'docs/guide/dao-setup/07_tools_stack.md' },
-      { id: 'dao-setup-08-top', title: '立上げ 08 セキュリティ/コンプライアンス', path: 'docs/guide/dao-setup/08_security_compliance.md' },
-      { id: 'dao-setup-09-top', title: '立上げ 09 ローンチ手順', path: 'docs/guide/dao-setup/09_launch_procedure.md' },
+      { id: 'setup-readme', title: 'はじめに: 立上げの全体像', path: 'docs/guide/setup/README.md' },
+      { id: 'setup-01', title: '1. 目的・範囲・法域', path: 'docs/guide/setup/01_concept.md' },
+      { id: 'setup-02', title: '2. パラメータ設計', path: 'docs/guide/setup/02_parameters.md' },
+      { id: 'setup-03', title: '3. 法人設立・規程採択', path: 'docs/guide/setup/03_legal.md' },
+      { id: 'setup-04', title: '4. ツール導入・ローンチ', path: 'docs/guide/setup/04_launch.md' },
     ],
   },
-  // 5) 運用ガイド（トップレベル）
+  // 5) 運用ガイド（Operation）
   {
-    key: 'runbook',
-    title: '運用ガイド（dao-runbook）',
+    key: 'operation',
+    title: '運用ガイド（Operation）',
     items: [
-      { id: 'dao-runbook-readme-top', title: '運用ガイド 概要', path: 'docs/guide/dao-runbook/README.md' },
-      { id: 'dao-runbook-01-top', title: '運用 01 役割と責任', path: 'docs/guide/dao-runbook/01_roles_and_responsibilities.md' },
-      { id: 'dao-runbook-02-top', title: '運用 02 年間カレンダー', path: 'docs/guide/dao-runbook/02_annual_calendar.md' },
-      { id: 'dao-runbook-03-top', title: '運用 03 総会運営', path: 'docs/guide/dao-runbook/03_assembly_operations.md' },
-      { id: 'dao-runbook-04-top', title: '運用 04 提案ライフサイクル', path: 'docs/guide/dao-runbook/04_proposal_lifecycle.md' },
-      { id: 'dao-runbook-05-top', title: '運用 05 トークンと権限', path: 'docs/guide/dao-runbook/05_token_and_permissions.md' },
-      { id: 'dao-runbook-06-top', title: '運用 06 トレジャリー運用', path: 'docs/guide/dao-runbook/06_treasury_operations.md' },
-      { id: 'dao-runbook-07-top', title: '運用 07 コンプライアンス・インシデント', path: 'docs/guide/dao-runbook/07_compliance_and_incidents.md' },
-      { id: 'dao-runbook-08-top', title: '運用 08 監査と改善', path: 'docs/guide/dao-runbook/08_audit_and_improvement.md' },
+      { id: 'operation-readme', title: 'はじめに: 運用ガイド概要', path: 'docs/guide/operation/README.md' },
+      { id: 'operation-calendar', title: '1. 定常業務カレンダー', path: 'docs/guide/operation/02_calendar.md' },
+      { id: 'operation-proposal', title: '2. 提案・投票の進め方', path: 'docs/guide/operation/03_proposal.md' },
+      { id: 'operation-membership', title: '3. メンバー管理とトークン', path: 'docs/guide/operation/04_membership.md' },
+      { id: 'operation-treasury', title: '4. トレジャリー運用', path: 'docs/guide/operation/05_treasury.md' },
+      { id: 'operation-incident', title: '5. インシデント対応', path: 'docs/guide/operation/06_incident.md' },
     ],
   },
 ];
-
-
