@@ -129,8 +129,57 @@
     }
   }
 
+  // Mobile menu functionality
+  function setupMobileMenu() {
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+
+    if (!menuToggle || !sidebar || !overlay) return;
+
+    function openMenu() {
+      sidebar.classList.add('open');
+      overlay.classList.add('open');
+      menuToggle.textContent = '✕';
+      menuToggle.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenu() {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('open');
+      menuToggle.textContent = '☰';
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    function toggleMenu() {
+      if (sidebar.classList.contains('open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', closeMenu);
+
+    // Close menu when a link is clicked (mobile)
+    sidebar.addEventListener('click', (e) => {
+      if (e.target.classList.contains('link')) {
+        closeMenu();
+      }
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && sidebar.classList.contains('open')) {
+        closeMenu();
+      }
+    });
+  }
+
   // init
   buildIndex();
+  setupMobileMenu();
   window.addEventListener('hashchange', onHashChange);
   // If a doc is selected, render it; otherwise keep the home intro
   if (location.hash) {

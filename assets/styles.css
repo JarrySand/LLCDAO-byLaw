@@ -131,9 +131,201 @@ html, body {
 .markdown-body code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
 .markdown-body a { color: var(--accent); }
 
+/* Mobile menu toggle button */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 1001;
+  background: var(--sidebar-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.menu-toggle:hover {
+  background: var(--accent-light);
+}
+
+/* Mobile overlay */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
 @media (max-width: 860px) {
-  .layout { grid-template-columns: 1fr; }
-  .sidebar { position: sticky; top: 0; z-index: 1; }
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    max-width: 85vw;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.15);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-overlay.open {
+    display: block;
+  }
+
+  .content {
+    padding: 60px 16px 24px 16px;
+  }
+
+  /* Larger touch targets */
+  .link {
+    padding: 12px 16px;
+  }
+
+  .section-header {
+    padding: 12px 16px;
+  }
+
+  /* Home page adjustments */
+  .home-content {
+    max-width: 100%;
+  }
+
+  .home-content h1 {
+    font-size: 1.5em;
+    line-height: 1.3;
+  }
+
+  .home-content h2 {
+    font-size: 1.2em;
+  }
+
+  .home-content .lead {
+    font-size: 1em;
+  }
+
+  /* Cards: single column on mobile */
+  .section-cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  .card-header {
+    gap: 6px;
+  }
+
+  .card-title {
+    font-size: 0.95em;
+  }
+
+  .card p {
+    font-size: 0.85em;
+  }
+
+  .card-links a {
+    display: block;
+    padding: 6px 0;
+    font-size: 0.9em;
+  }
+
+  /* Community links: single column */
+  .community-links {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .community-item {
+    padding: 14px;
+  }
+
+  .community-item li {
+    padding: 4px 0;
+  }
+
+  /* Banners */
+  .warning-banner,
+  .info-banner,
+  .highlight-box {
+    padding: 12px;
+    font-size: 0.9em;
+  }
+
+  .warning-banner ul {
+    padding-left: 16px;
+  }
+
+  /* Navigation guide list */
+  .home-content > ul {
+    padding-left: 20px;
+  }
+
+  .home-content > ul li {
+    margin: 8px 0;
+    line-height: 1.5;
+  }
+
+  /* Markdown content adjustments */
+  .markdown-body pre {
+    padding: 10px;
+    font-size: 0.85em;
+  }
+
+  .markdown-body h1 {
+    font-size: 1.4em;
+  }
+
+  .markdown-body h2 {
+    font-size: 1.2em;
+  }
+
+  .markdown-body h3 {
+    font-size: 1.1em;
+  }
+}
+
+/* Even smaller screens */
+@media (max-width: 400px) {
+  .content {
+    padding: 56px 12px 20px 12px;
+  }
+
+  .home-content h1 {
+    font-size: 1.3em;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .badge {
+    font-size: 0.65em;
+    padding: 2px 6px;
+  }
 }
 
 /* ===========================
