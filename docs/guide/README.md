@@ -95,5 +95,4 @@ DAOを日常的に運営するための実務ガイドです。
 このガイドの内容についても、ご意見・ご提案を歓迎します！
 
 - [GitHub Issue](https://github.com/JarrySand/LLCDAO-byLaw/issues/new) で改善提案
-- [GitHub Discussions](https://github.com/JarrySand/LLCDAO-byLaw/discussions) で質問・議論
 - [日本DAO協会 Discord](https://discord.gg/kK4Qg56t) の「ルール」チャンネルまで
