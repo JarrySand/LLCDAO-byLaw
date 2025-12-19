@@ -1,10 +1,10 @@
 // Navigation config for the site. Group documents by section.
 // path is relative to the site root (repository root when Pages source is root).
 window.DOCS = [
-  // 1) 定款規程（ver2.0系 - 公開中）
+  // 1) 定款規程（ver2.0系 - 暫定版）
   {
     key: 'bylaws',
-    title: '📜 定款・規程（最新版）',
+    title: '📜 定款・規程（暫定版）',
     items: [
       { id: 'bylaw-articles-v2-0', title: '01 定款ひな形 ver2.0', path: '01_【社員権トークン＋ガバナンストークン】合同会社型DAO定款ひな形ver2.0.md' },
       { id: 'assembly-rules-v2-1', title: '02 DAO総会規程 ver2.1', path: '02_DAO総会規程ver2.1.md' },
