@@ -60,18 +60,18 @@ DAOの社会実装を推進する**公共財（Public Good）**として、成�
 
 | ドキュメント | 説明 |
 |-------------|------|
-| [定款 ver3.3（ドラフト）](./docs/teikan-revision/drafts/定款ver3.3.md) | 次期バージョンのドラフト |
-| [改定プロジェクト概要](./docs/teikan-revision/README.md) | ver3.x改定の経緯・論点整理 |
+| [定款 ver3.3（ドラフト）](./docs/flow/teikan-revision/drafts/定款ver3.3.md) | 次期バージョンのドラフト |
+| [改定プロジェクト概要](./docs/flow/teikan-revision/README.md) | ver3.x改定の経緯・論点整理 |
 
 ### 📖 ガイド
 
 | ドキュメント | 説明 |
 |-------------|------|
-| [全体説明](./docs/guide/README.md) | ガイド全体の概要 |
-| [設計思想（context）](./docs/guide/context.md) | 定款・規程の設計原則・トレードオフ |
-| [構成/参照/版管理](./docs/guide/structure.md) | ドキュメント構成と版管理方針 |
-| [立上げガイド](./docs/guide/setup/README.md) | DAO新規立ち上げの手順（作成中） |
-| [運用ガイド](./docs/guide/operation/README.md) | 日常運営の実務ガイド（作成中） |
+| [全体説明](./docs/stock/guide/README.md) | ガイド全体の概要 |
+| [設計思想（context）](./docs/stock/guide/context.md) | 定款・規程の設計原則・トレードオフ |
+| [構成/参照/版管理](./docs/stock/guide/structure.md) | ドキュメント構成と版管理方針 |
+| [立上げガイド](./docs/stock/guide/setup/README.md) | DAO新規立ち上げの手順（作成中） |
+| [運用ガイド](./docs/stock/guide/operation/README.md) | 日常運営の実務ガイド（作成中） |
 
 > 💡 立上げガイド・運用ガイドは開発途中です。定款 ver3.3 完成後に内容を固めていく予定です。
 
@@ -87,7 +87,7 @@ DAOの社会実装を推進する**公共財（Public Good）**として、成�
 - **責任所在の明確化** — 誰がどう責任を負うか、免責されるのはどんな場合かを明示
 - **DAOによる意思決定の影響力の最大化** — 現行法で可能な範囲でDAO決議を法人決議に直結
 
-詳細は [設計思想（context）](./docs/guide/context.md) をご覧ください。
+詳細は [設計思想（context）](./docs/stock/guide/context.md) をご覧ください。
 
 ---
 
@@ -122,8 +122,12 @@ LLCDAO-bylaw/
 ├── 05_用語集.md                 # 用語集
 ├── appendices/                  # 別紙（パラメータ集）
 ├── docs/
-│   ├── guide/                   # ガイド（設計思想・立上げ・運用）
-│   └── teikan-revision/         # 定款改定プロジェクト（ver3.x）
+│   ├── stock/                   # 安定参照（ガイド・緊急時対応まとめ）
+│   │   ├── guide/               # ガイド（設計思想・立上げ・運用）
+│   │   └── 緊急時対応規定まとめ.md
+│   └── flow/                    # 作業中（改訂・整合ワークスペース）
+│       ├── teikan-revision/     # 定款改定プロジェクト（ver3.x）
+│       └── 規程整合-ver3.3/      # 規程類のver3.3整合修正
 ├── assets/                      # GitHub Pages用アセット
 ├── index.html                   # GitHub Pagesエントリ
 └── wip/                         # 作成中のドキュメント

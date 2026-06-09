@@ -194,7 +194,7 @@ ver3.2で以下を実現：
 ## 7. ディレクトリ構造
 
 ```
-docs/teikan-revision/
+docs/flow/teikan-revision/
 ├── README.md                              ← 本ドキュメント（コンテキストサマリー）
 ├── sources/                               ← ソースファイル（参照用）
 │   └── 定款macver.md                      ← 弁護士mac独自開発版

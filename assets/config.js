@@ -18,8 +18,8 @@ window.DOCS = [
     key: 'dev',
     title: '🔬 開発中（v3.x）',
     items: [
-      { id: 'teikan-v3-3', title: '定款 ver3.3（ドラフト）', path: 'docs/teikan-revision/drafts/定款ver3.3.md' },
-      { id: 'teikan-revision-readme', title: '改定プロジェクト概要', path: 'docs/teikan-revision/README.md' },
+      { id: 'teikan-v3-3', title: '定款 ver3.3（ドラフト）', path: 'docs/flow/teikan-revision/drafts/定款ver3.3.md' },
+      { id: 'teikan-revision-readme', title: '改定プロジェクト概要', path: 'docs/flow/teikan-revision/README.md' },
     ],
   },
   // 3) 別紙
@@ -37,9 +37,9 @@ window.DOCS = [
     key: 'guides',
     title: '📖 全体説明',
     items: [
-      { id: 'guide-readme', title: 'ガイド概要（README）', path: 'docs/guide/README.md' },
-      { id: 'guide-context', title: '設計思想（context）', path: 'docs/guide/context.md' },
-      { id: 'guide-structure', title: '構成/参照/版管理（structure）', path: 'docs/guide/structure.md' },
+      { id: 'guide-readme', title: 'ガイド概要（README）', path: 'docs/stock/guide/README.md' },
+      { id: 'guide-context', title: '設計思想（context）', path: 'docs/stock/guide/context.md' },
+      { id: 'guide-structure', title: '構成/参照/版管理（structure）', path: 'docs/stock/guide/structure.md' },
     ],
   },
   // 5) 立上げガイド（Setup）
@@ -47,11 +47,11 @@ window.DOCS = [
     key: 'setup',
     title: '🚀 立上げガイド（Setup）',
     items: [
-      { id: 'setup-readme', title: 'はじめに: 立上げの全体像', path: 'docs/guide/setup/README.md' },
-      { id: 'setup-01', title: '1. 目的・範囲・法域', path: 'docs/guide/setup/01_concept.md' },
-      { id: 'setup-02', title: '2. パラメータ設計', path: 'docs/guide/setup/02_parameters.md' },
-      { id: 'setup-03', title: '3. 法人設立・規程採択', path: 'docs/guide/setup/03_legal.md' },
-      { id: 'setup-04', title: '4. ツール導入・ローンチ', path: 'docs/guide/setup/04_launch.md' },
+      { id: 'setup-readme', title: 'はじめに: 立上げの全体像', path: 'docs/stock/guide/setup/README.md' },
+      { id: 'setup-01', title: '1. 目的・範囲・法域', path: 'docs/stock/guide/setup/01_concept.md' },
+      { id: 'setup-02', title: '2. パラメータ設計', path: 'docs/stock/guide/setup/02_parameters.md' },
+      { id: 'setup-03', title: '3. 法人設立・規程採択', path: 'docs/stock/guide/setup/03_legal.md' },
+      { id: 'setup-04', title: '4. ツール導入・ローンチ', path: 'docs/stock/guide/setup/04_launch.md' },
     ],
   },
   // 6) 運用ガイド（Operation）
@@ -59,12 +59,12 @@ window.DOCS = [
     key: 'operation',
     title: '⚙️ 運用ガイド（Operation）',
     items: [
-      { id: 'operation-readme', title: 'はじめに: 運用ガイド概要', path: 'docs/guide/operation/README.md' },
-      { id: 'operation-calendar', title: '1. 定常業務カレンダー', path: 'docs/guide/operation/02_calendar.md' },
-      { id: 'operation-proposal', title: '2. 提案・投票の進め方', path: 'docs/guide/operation/03_proposal.md' },
-      { id: 'operation-membership', title: '3. メンバー管理とトークン', path: 'docs/guide/operation/04_membership.md' },
-      { id: 'operation-treasury', title: '4. トレジャリー運用', path: 'docs/guide/operation/05_treasury.md' },
-      { id: 'operation-incident', title: '5. インシデント対応', path: 'docs/guide/operation/06_incident.md' },
+      { id: 'operation-readme', title: 'はじめに: 運用ガイド概要', path: 'docs/stock/guide/operation/README.md' },
+      { id: 'operation-calendar', title: '1. 定常業務カレンダー', path: 'docs/stock/guide/operation/02_calendar.md' },
+      { id: 'operation-proposal', title: '2. 提案・投票の進め方', path: 'docs/stock/guide/operation/03_proposal.md' },
+      { id: 'operation-membership', title: '3. メンバー管理とトークン', path: 'docs/stock/guide/operation/04_membership.md' },
+      { id: 'operation-treasury', title: '4. トレジャリー運用', path: 'docs/stock/guide/operation/05_treasury.md' },
+      { id: 'operation-incident', title: '5. インシデント対応', path: 'docs/stock/guide/operation/06_incident.md' },
     ],
   },
 ];
